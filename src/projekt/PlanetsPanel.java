@@ -76,7 +76,7 @@ public class PlanetsPanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                JFileChooser j = new JFileChooser("C:/Tamara/Labor/Java/JavaProjekt/saves", FileSystemView.getFileSystemView());
+                JFileChooser j = new JFileChooser("./saves", FileSystemView.getFileSystemView());
                 j.setAcceptAllFileFilterUsed(false);
                 FileNameExtensionFilter restrict = new FileNameExtensionFilter("dat files", "dat");
                 j.addChoosableFileFilter(restrict);

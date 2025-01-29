@@ -52,7 +52,7 @@ public class GameFrame extends JFrame implements PanelSwitcher {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                JFileChooser j = new JFileChooser("C:/Tamara/Labor/Java/Javaprojekt/saves", FileSystemView.getFileSystemView());
+                JFileChooser j = new JFileChooser("./saves", FileSystemView.getFileSystemView());
                 j.setAcceptAllFileFilterUsed(false);
                 FileNameExtensionFilter restrict = new FileNameExtensionFilter("dat files", "dat");
                 j.addChoosableFileFilter(restrict);
@@ -63,9 +63,10 @@ public class GameFrame extends JFrame implements PanelSwitcher {
                     } catch (IOException | UnsupportedAudioFileException | LineUnavailableException ex) {
                         throw new RuntimeException(ex);
                     }
+                    cardPanel.add(planetsPanel, "planets");
+                    layout.show(cardPanel, "planets");
                 }
-                cardPanel.add(planetsPanel, "planets");
-                layout.show(cardPanel, "planets");
+                
             }
         });
         farm = new Farm[4];
